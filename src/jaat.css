@@ -1,0 +1,278 @@
+
+/* =========================
+   JAVASCRIPT PAGE
+========================= */
+
+.js-page {
+  min-height: 100vh;
+  padding: 40px 6%;
+  background: #0a0d16;
+  color: #ffffff;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.js-hero {
+  text-align: center;
+  padding: 70px 20px;
+  margin-bottom: 50px;
+
+  border-radius: 24px;
+
+  background: linear-gradient(
+    135deg,
+    #151a2b,
+    #0d1220
+  );
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.js-hero h1 {
+  margin: 0 0 15px;
+
+  font-size: 56px;
+  font-weight: 800;
+  letter-spacing: -1px;
+
+  background: linear-gradient(
+    90deg,
+    #f7df1e,
+    #ff9800
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.js-hero p {
+  margin: 0;
+
+  color: #b6bfd3;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.js-topics-container {
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.js-topic-card {
+  position: relative;
+
+  padding: 28px;
+
+  border-radius: 20px;
+
+  background: #111625;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  overflow: hidden;
+
+  transition: all 0.35s ease;
+}
+
+.js-topic-card::before {
+  content: "";
+
+  position: absolute;
+
+  width: 130px;
+  height: 130px;
+
+  top: -65px;
+  right: -65px;
+
+  background: #f7df1e;
+
+  border-radius: 50%;
+
+  filter: blur(70px);
+
+  opacity: 0.13;
+}
+
+.js-topic-card:hover {
+  transform: translateY(-8px);
+
+  border-color: #f7df1e;
+
+  box-shadow:
+    0 15px 40px rgba(247, 223, 30, 0.12);
+}
+
+/* =========================
+   NUMBER
+========================= */
+
+.js-topic-number {
+  display: inline-block;
+
+  margin-bottom: 18px;
+
+  padding: 6px 12px;
+
+  border-radius: 30px;
+
+  background: rgba(247, 223, 30, 0.1);
+
+  color: #f7df1e;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* =========================
+   TOPIC
+========================= */
+
+.js-topic-card h2 {
+  margin: 0 0 10px;
+
+  font-size: 27px;
+  font-weight: 800;
+
+  color: #ffffff;
+
+  word-break: break-word;
+}
+
+/* =========================
+   NAME
+========================= */
+
+.js-topic-card h3 {
+  margin: 0 0 15px;
+
+  font-size: 17px;
+  font-weight: 600;
+
+  color: #ff9800;
+}
+
+/* =========================
+   USE
+========================= */
+
+.js-topic-card p {
+  margin-bottom: 20px;
+
+  color: #b8c0d4;
+
+  font-size: 15px;
+
+  line-height: 1.7;
+}
+
+.js-topic-card p strong {
+  color: #ffffff;
+}
+
+/* =========================
+   EXAMPLE
+========================= */
+
+.js-example-box {
+  padding: 17px;
+
+  border-radius: 12px;
+
+  background: #080b12;
+
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.js-example-box strong {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #f7df1e;
+
+  font-size: 14px;
+}
+
+.js-example-box code {
+  display: block;
+
+  color: #d6dcff;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  white-space: pre-wrap;
+
+  word-break: break-word;
+
+  font-family: "Courier New", monospace;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1000px) {
+  .js-topics-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .js-hero h1 {
+    font-size: 45px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+  .js-page {
+    padding: 25px 15px;
+  }
+
+  .js-hero {
+    padding: 50px 15px;
+    margin-bottom: 30px;
+  }
+
+  .js-hero h1 {
+    font-size: 36px;
+  }
+
+  .js-hero p {
+    font-size: 15px;
+  }
+
+  .js-topics-container {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .js-topic-card {
+    padding: 22px;
+  }
+
+  .js-topic-card h2 {
+    font-size: 23px;
+  }
+}
